@@ -25,3 +25,5 @@ Pushing code from local repository to upstream was a tedious task.
 I've developed this script to make the whole process easier and less time consuming.
 
 # Screenshot
+![alt tag](https://github.com/mayank26saxena/LazyGit/blob/master/screenshots/screenshot2.png)
+![alt tag](https://github.com/mayank26saxena/LazyGit/blob/master/screenshots/screenshot1.png)
