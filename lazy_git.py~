@@ -32,6 +32,8 @@ def main():
         repo_name = sys.argv[2]
         commit_msg = raw_input('Write your commit message: ')
 
+	os.chdir('%s' %checkout_dir)
+
 	#Path to local repository
         path =  checkout_dir + '/' + repo_name + '/'
         
@@ -53,7 +55,7 @@ def main():
             
         txt = """#!/bin/sh
 
-GIT_WORK_TREE = %s git checkout -f""" %path
+GIT_WORK_TREE = %s git checkout -f""" % path
 
 	#Run git add, commit, push
         os.system('git add -A')
