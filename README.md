@@ -6,11 +6,11 @@ For generating your own SSH key check out [Generating an SSH key](https://help.g
 # How to Use
 1. Clone <code>LazyGit</code>
 2. Replace your <code>git_username</code> && <code>git_reponame</code> in the file and save.
-3. Navigate to directory where <code>lazy_git</code> is cloned.
+3. Navigate to the directory where <code>lazy_git</code> is cloned.
 4. Run <code>python lazy_git.py \<checkout_directory\> \<local_repo_name\></code>
 
 # Code Example
-3 system arguements are required for running LazyGit :
+3 system arguments are required for running LazyGit :
 
 - file name (always lazy_git.py)
 - checkout_directory 
@@ -21,7 +21,7 @@ For generating your own SSH key check out [Generating an SSH key](https://help.g
 Eg : <code> python lazy_git.py /home/mayank/Desktop/LazyGit LazyGit </code>
 
 # Motivation
-Pushing code from local repository to upstream was a tedious task. 
+Pushing code from a local repository to an upstream was a tedious task. 
 I've developed this script to make the whole process easier and less time consuming.
 
 # Screenshots
