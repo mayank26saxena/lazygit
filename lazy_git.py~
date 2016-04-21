@@ -36,14 +36,12 @@ def main():
         path =  checkout_dir + '/' + repo_name + '/'
         
         os.chdir('%s' %path)
-	
-	#Printing current wokring directory
-	print 'Current working directory is : '
+
         os.system('pwd')
         
 	#Check whether git has been initialised in directory
         n = os.system('git rev-parse')
-        #print n 
+        print n 
         
 	#If n == 0 git has been initialised already	
 	#If n != 0 initialise git and add remote repo URL
