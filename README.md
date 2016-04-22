@@ -27,3 +27,5 @@ I've developed this script to make the whole process easier and less time consum
 # Screenshots
 ![alt tag](https://github.com/mayank26saxena/LazyGit/blob/master/screenshots/screenshot1.png)
 ![alt tag](https://github.com/mayank26saxena/LazyGit/blob/master/screenshots/screenshot2.png)
+
+That awesome moment when I used lazy\_git.py to push lazy_git.py :wink: 
