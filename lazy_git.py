@@ -4,12 +4,17 @@ import sys
 """
 You need to have a valid SSH key added to your GitHub account
 This key serves as a fingerprint and password authentication is skipped while pushing code
+If SSH key has not been added then you will be prompted for password while pushing
 
 For running LazyGit -
 3 system arguements are required
-First one has to be file name ie lazy_git.py
-Second one has to be checkout_directory 
-Third one has to be local repo_name
+Argument[0] - file name ie lazy_git.py
+Argument[1] - checkout_directory 
+Argument[2] - local_repo_name
+
+To run locally, execute the following command:
+python lazy_git.py <checkout_directory> <local_repo_name>
+
 """
 
 #Keywords
