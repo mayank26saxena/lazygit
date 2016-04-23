@@ -8,18 +8,17 @@ For generating your own SSH key check out [Generating an SSH key](https://help.g
 1. Clone <code>LazyGit</code>
 2. Navigate to the directory where <code>lazy_git</code> is cloned. <code>cd LazyGit </code>
 3. Run <code>python lazy_git new</code> to setup your git_username and git_reponame.
-4. Run <code>python lazy_git.py \<checkout_directory\> \<local_repo_name\></code>
+4. Run <code>python lazy_git.py \<checkout_directory\> </code>
 
 # Code Example
-3 system arguments are required for running LazyGit :
+2 system arguments are required for running LazyGit :
 
 - file name (always lazy_git.py)
 - checkout_directory 
-- local repo_name
 
-> python lazy_git.py \<checkout_directory\> \<local_repo_name\>
+> python lazy_git.py \<checkout_directory\> 
 
-Eg : <code> python lazy_git.py /home/mayank/Desktop/LazyGit LazyGit </code>
+Eg : <code> python lazy_git.py /home/mayank/Desktop/LazyGit </code>
 
 # Motivation
 Pushing code from a local repository to an upstream was a tedious task. 
@@ -32,5 +31,5 @@ I've developed this script to make the whole process easier and less time consum
 That awesome moment when I used lazy\_git.py to push lazy_git.py :laughing:
 
 # Task Lists
-- [] Submit package to PyPi.
-- 
+- [ ] Submit package to PyPi.
+ 
