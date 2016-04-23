@@ -5,8 +5,8 @@ For generating your own SSH key check out [Generating an SSH key](https://help.g
 
 # How to Use
 1. Clone <code>LazyGit</code>
-2. Navigate to the directory where <code>lazy_git</code> is cloned. <code>cd LazyGit </code>
-3. Run <code>python lazy_git new</code> to setup your git_username and git_reponame.
+2. Replace your <code>git_username</code> && <code>git_reponame</code> in the file and save.
+3. Navigate to the directory where <code>lazy_git</code> is cloned. <code>cd LazyGit </code>
 4. Run <code>python lazy_git.py \<checkout_directory\> \<local_repo_name\></code>
 
 # Code Example
