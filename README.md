@@ -1,5 +1,6 @@
 # Synopsis
-LazyGit is to be used to automate the process of pushing code from local repository to remote repository. 
+LazyGit is to be used to automate the process of pushing code from local repository to remote repository.
+Very useful for personal projects.
 To skip password authentication while pushing code you need to have an SSH key linked to your GitHub account. 
 For generating your own SSH key check out [Generating an SSH key](https://help.github.com/articles/generating-an-ssh-key/).
 
@@ -26,6 +27,10 @@ I've developed this script to make the whole process easier and less time consum
 
 # Screenshots
 ![alt tag](https://github.com/mayank26saxena/LazyGit/blob/master/screenshots/screenshot1.png)
-![alt tag](https://github.com/mayank26saxena/LazyGit/blob/master/screenshots/screenshot2.png)
+![alt tag](https://github.com/mayank26saxena/LazyGit/blob/master/screenshots/screenshot4.png)
 
-That awesome moment when I used lazy\_git.py to push lazy_git.py :wink: 
+That awesome moment when I used lazy\_git.py to push lazy_git.py :laughing:
+
+# Task Lists
+- [] Submit package to PyPi.
+- 
