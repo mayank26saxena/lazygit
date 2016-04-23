@@ -12,7 +12,6 @@ For running LazyGit -
 3 system arguements are required
 Argument[0] - file name ie lazy_git.py
 Argument[1] - checkout_directory 
-Argument[2] - local_repo_name
 
 To run locally, execute the following command:
 python lazy_git.py <checkout_directory> <local_repo_name>
@@ -37,59 +36,55 @@ def main():
             git_reponame = raw_input('Enter GitHub remote repository name : ')
             f.write(git_reponame)
             f.close()
+
+        else :
     
-    if len(sys.argv) == 1 or len(sys.argv) > 3:
-        print 'Please enter 3 arguements.'
+            checkout_dir = sys.argv[1]
+            commit_msg = raw_input('Write your commit message: ')
 
-    if len(sys.argv) == 3 :
-        checkout_dir = sys.argv[1]
-        repo_name = sys.argv[2]
-        commit_msg = raw_input('Write your commit message: ')
+            #Retrieve git_username and git_reponame from info.txt file
+            file_name = 'info.txt'
+            with open(file_name) as f:
+                content = f.readlines()
 
+            content = [x.strip('\n') for x in content]
 
-        #Retrieve git_username and git_reponame from info.txt file
-        file_name = 'info.txt'
-        with open(file_name) as f:
-            content = f.readlines()
+            git_username = content[0]
+            git_reponame = content[1]
 
-        content = [x.strip('\n') for x in content]
-
-        git_username = content[0]
-        git_reponame = content[1]
-
-        url = git_remote_command + git_username + slash + git_reponame + git
+            url = git_remote_command + git_username + slash + git_reponame + git
         
-	#Path to local repository
-        path =  checkout_dir + '/' + repo_name + '/'
+            #Path to local repository
+            #path =  checkout_dir + '/' + repo_name + '/'
         
-        os.chdir('%s' %path)
+            os.chdir('%s' %checkout_dir)
 	
-	#Printing current wokring directory
-	print 'Current working directory is : '
-        os.system('pwd')        
+            #Printing current wokring directory
+            print 'Current working directory is : '
+            os.system('pwd')        
         
-	#Check whether git has been initialised in directory
-        n = os.system('git rev-parse')
-        #print n 
+            #Check whether git has been initialised in directory
+            n = os.system('git rev-parse')
+            #print n 
         
-	#If n == 0 git has been initialised already	
-	#If n != 0 initialise git and add set remote repo URL
-        if n != 0 :
-            print 'Current working directory is - '
-            os.system('pwd')
-            os.system('git init')
-            os.system('git remote add origin https://github.com/' + git_username + slash + git_reponame + git)
-            os.system('git remote add origin git@github.com:' + git_username + slash + git_reponame + git)
-            os.system(url)
+            #If n == 0 git has been initialised already	
+            #If n != 0 initialise git and add set remote repo URL
+            if n != 0 :
+                print 'Current working directory is - '
+                os.system('pwd')
+                os.system('git init')
+                os.system('git remote add origin https://github.com/' + git_username + slash + git_reponame + git)
+                os.system('git remote add origin git@github.com:' + git_username + slash + git_reponame + git)
+                os.system(url)
             
-        txt = """#!/bin/sh
+            txt = """#!/bin/sh
 
-GIT_WORK_TREE = %s git checkout -f""" %path
+GIT_WORK_TREE = %s git checkout -f""" %checkout_dir
 
-	#Run git add, commit, push
-        os.system('git add .')
-        os.system('git commit -m \'' + commit_msg + '\'')
-        os.system('git push origin master')
+            #Run git add, commit, push
+            os.system('git add .')
+            os.system('git commit -m \'' + commit_msg + '\'')
+            os.system('git push origin master')
 
 if __name__ == "__main__" :
     main()
