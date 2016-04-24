@@ -4,32 +4,47 @@ Very useful for personal projects.
 To skip password authentication while pushing code you need to have an SSH key linked to your GitHub account. 
 For generating your own SSH key check out [Generating an SSH key](https://help.github.com/articles/generating-an-ssh-key/).
 
+# Install
+
+### Using pip
+<code> pip install lazygit </code>
+
+### Using Git
+<code>git clone https://github.com/mayank26saxena/LazyGit.git</code>
+
+<code>cd lazygit</code>
+
+<code>python setup.py install</code>
+
 # How to Use
-1. Clone <code>LazyGit</code>
-2. Navigate to the directory where <code>lazy_git</code> is cloned. <code>cd LazyGit </code>
-3. Run <code>python lazy_git new</code> to setup your git_username and git_reponame.
-4. Run <code>python lazy_git.py \<checkout_directory\> </code>
-
-# Code Example
-2 system arguments are required for running LazyGit :
-
-- file name (always lazy_git.py)
-- checkout_directory 
-
-> python lazy_git.py \<checkout_directory\> 
-
-Eg : <code> python lazy_git.py /home/mayank/Desktop/LazyGit </code>
+1. Run <code>pip install lazygit</code> to install.
+2. Run <code>lazygit new</code> to setup username and reponame. 
+3. Run <code>python lazygit \<checkout_directory\> </code>
+4. Write commit message.
+5. Voila! Your commit has been pushed.
 
 # Motivation
 Pushing code from a local repository to an upstream was a tedious task. 
-I've developed this script to make the whole process easier and less time consuming.
+I've developed this script to make the whole process easier, user friendly and less time consuming.
+
+# Code Example
+<code>lazygit new</code>
+> Enter your GitHub username : mayank26saxena
+
+> Enter Github remote repository name : LazyGit
+
+<code>lazygit /home/mayank/Desktop/LazyGit</code>
+> Write your commit message : Pushing via lazygit.
+
+![alt tag](https://github.com/mayank26saxena/LazyGit/blob/master/screenshots/screenshot6.png)
 
 # Screenshots
-![alt tag](https://github.com/mayank26saxena/LazyGit/blob/master/screenshots/screenshot1.png)
-![alt tag](https://github.com/mayank26saxena/LazyGit/blob/master/screenshots/screenshot4.png)
+![alt tag](https://github.com/mayank26saxena/LazyGit/blob/master/screenshots/screenshot5.png)
+![alt tag](https://github.com/mayank26saxena/LazyGit/blob/master/screenshots/screenshot6.png)
 
 That awesome moment when I used lazy\_git.py to push lazy_git.py :laughing:
 
 # Task Lists
-- [ ] Submit package to PyPi.
+- [X] Submit package to PyPi.
+- [ ] Add git pull operation before push.
  
