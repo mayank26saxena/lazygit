@@ -1,8 +1,12 @@
-# Synopsis
+# LazyGit
 LazyGit is to be used to automate the process of pushing code from local repository to remote repository.
 Very useful for personal projects.
 To skip password authentication while pushing code you need to have an SSH key linked to your GitHub account. 
 For generating your own SSH key check out [Generating an SSH key](https://help.github.com/articles/generating-an-ssh-key/).
+
+[![PyPI](https://img.shields.io/badge/PyPi-v0.6-f39f37.svg)](https://pypi.python.org/pypi/lazygit)
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](https://doge.mit-license.org/)
+
 
 # Install
 
@@ -36,13 +40,12 @@ I've developed this script to make the whole process easier, user friendly and l
 <code>lazygit /home/mayank/Desktop/LazyGit</code>
 > Write your commit message : Pushing via lazygit.
 
-![alt tag](https://github.com/mayank26saxena/LazyGit/blob/master/screenshots/screenshot6.png)
+![alt tag](https://github.com/mayank26saxena/LazyGit/blob/master/screenshots/screenshot5.png)
 
 # Screenshots
-![alt tag](https://github.com/mayank26saxena/LazyGit/blob/master/screenshots/screenshot5.png)
 ![alt tag](https://github.com/mayank26saxena/LazyGit/blob/master/screenshots/screenshot6.png)
 
-That awesome moment when I used lazy\_git.py to push lazy_git.py :laughing:
+That awesome moment when I used lazy\_git.py to push lazy_git.py :sunglasses:
 
 # Task Lists
 - [X] Submit package to PyPi.
