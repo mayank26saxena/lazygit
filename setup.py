@@ -11,12 +11,11 @@ setup(
   keywords = ['github', 'push', 'commit', 'lazygit'], # arbitrary keywords
   classifiers = [],
   install_requires=[
-        "os",
-        "system"
+       "system"
   ],  
   entry_points={
         'console_scripts': [
-            'lazygit = lazygit.lazy_git:main'
+            'lazygit = lazygit.main:main'
         ],
   }
 )
