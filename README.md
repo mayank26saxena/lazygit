@@ -38,7 +38,7 @@ I've developed this script to make the whole process easier, user friendly and l
 > Enter Github remote repository name : LazyGit
 
 <code>lazygit /home/mayank/Desktop/LazyGit</code>
-> Write your commit message : Pushing via lazygit.
+> Write your commit message : Removed backup files.
 
 ![alt tag](https://github.com/mayank26saxena/LazyGit/blob/master/screenshots/screenshot3.png)
 
