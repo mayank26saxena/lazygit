@@ -84,7 +84,7 @@ GIT_WORK_TREE = %s git checkout -f""" %checkout_dir
             #Run git add, commit, push
             os.system('git add .')
             os.system('git commit -m \'' + commit_msg + '\'')
-            s = 'git push origin' + branch_name
+            s = 'git push origin ' + branch_name
             os.system(s)
 
 if __name__ == "__main__" :
