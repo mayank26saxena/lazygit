@@ -29,18 +29,18 @@ def main():
         text = text.lower()
         if text == 'new' :
             #Write git_username and git_reponame to info.txt file
-            f = open('info.txt' , 'w+')
-            git_username = raw_input('Enter your GitHub username : ')
+            f = open('info.txt' , 'w')
+            git_username = input('Enter your GitHub username : ')
             f.write(git_username)
             f.write(os.linesep)
-            git_reponame = raw_input('Enter GitHub remote repository name : ')
+            git_reponame = input('Enter GitHub remote repository name : ')
             f.write(git_reponame)
             f.close()
 
         else :
     
             checkout_dir = sys.argv[1]
-            commit_msg = raw_input('Write your commit message: ')
+            commit_msg = input('Write your commit message: ')
 
             #Retrieve git_username and git_reponame from info.txt file
             file_name = 'info.txt'
@@ -53,9 +53,6 @@ def main():
             git_reponame = content[1]
 
             url = git_remote_command + git_username + slash + git_reponame + git
-        
-            #Path to local repository
-            #path =  checkout_dir + '/' + repo_name + '/'
         
             os.chdir('%s' %checkout_dir)
 	
@@ -70,7 +67,7 @@ def main():
             #If n == 0 git has been initialised already	
             #If n != 0 initialise git and add set remote repo URL
             if n != 0 :
-                print 'Current working directory is - '
+                print ('Current working directory is - ')
                 os.system('pwd')
                 os.system('git init')
                 os.system('git remote add origin https://github.com/' + git_username + slash + git_reponame + git)
