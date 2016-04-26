@@ -49,6 +49,6 @@ That awesome moment when I used lazy\_git.py to push lazy_git.py :sunglasses:
 
 # Task Lists
 - [X] Submit package to PyPi.
-- [ ] Add support for Python 3+.
+- [X] Add support for Python 3+.
 - [ ] Add git pull operation before push.
  
