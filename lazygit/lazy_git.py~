@@ -29,7 +29,7 @@ def main():
         text = text.lower()
         if text == 'new' :
             #Write git_username and git_reponame to info.txt file
-            f = open('info.txt' , 'w+')
+            f = open('info.txt' , 'w')
             git_username = raw_input('Enter your GitHub username : ')
             f.write(git_username)
             f.write(os.linesep)
