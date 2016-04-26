@@ -41,7 +41,7 @@ def main():
     
             checkout_dir = sys.argv[1]
             commit_msg = raw_input('Write your commit message: ')
-
+            branch_name = raw_input('Enter Branch name: ')
             #Retrieve git_username and git_reponame from info.txt file
             file_name = 'info.txt'
             with open(file_name) as f:
@@ -84,7 +84,8 @@ GIT_WORK_TREE = %s git checkout -f""" %checkout_dir
             #Run git add, commit, push
             os.system('git add .')
             os.system('git commit -m \'' + commit_msg + '\'')
-            os.system('git push origin master')
+            s = 'git push origin' + branch_name
+            os.system(s)
 
 if __name__ == "__main__" :
     main()
