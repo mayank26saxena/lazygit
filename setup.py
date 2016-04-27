@@ -14,5 +14,8 @@ setup(
         'console_scripts': [
             'lazygit = lazygit.main:main'
         ],
-  }
+  },
+  install_requires=[
+      'gitpython',
+  ]
 )

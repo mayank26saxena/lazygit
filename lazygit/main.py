@@ -1,5 +1,6 @@
 import os
 import sys
+from git import Repo
 
 """
 You need to have a valid SSH key added to your GitHub account
@@ -42,7 +43,12 @@ def main():
             checkout_dir = sys.argv[1]
             commit_msg = raw_input('Write your commit message: ')
 
+
+            repo = Repo(checkout_dir)
+            branch = repo.active_branch
+            print branch.name
             #Retrieve git_username and git_reponame from info.txt file
+            
             file_name = 'info.txt'
             with open(file_name) as f:
                 content = f.readlines()
@@ -84,7 +90,7 @@ GIT_WORK_TREE = %s git checkout -f""" %checkout_dir
             #Run git add, commit, push
             os.system('git add .')
             os.system('git commit -m \'' + commit_msg + '\'')
-            os.system('git push origin master')
+            os.system('git push origin '+branch.name)
 
 if __name__ == "__main__" :
     main()
