@@ -4,7 +4,7 @@ Very useful for personal projects.
 To skip password authentication while pushing code you need to have an SSH key linked to your GitHub account. 
 For generating your own SSH key check out [Generating an SSH key](https://help.github.com/articles/generating-an-ssh-key/).
 
-[![PyPI](https://img.shields.io/badge/PyPi-v0.6-f39f37.svg)](https://pypi.python.org/pypi/lazygit)
+[![PyPI](https://img.shields.io/badge/PyPi-v0.8-f39f37.svg)](https://pypi.python.org/pypi/lazygit)
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](https://doge.mit-license.org/)
 
 
@@ -50,5 +50,6 @@ That awesome moment when I used lazy\_git.py to push lazy_git.py :sunglasses:
 # Task Lists
 - [X] Submit package to PyPi.
 - [X] Add support for Python 3+.
+- [X] Option to make commit on a branch. Default branch is master.  
 - [ ] Add git pull operation before push.
  
