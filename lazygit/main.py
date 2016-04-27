@@ -31,22 +31,23 @@ def main():
         if text == 'new' :
             #Write git_username and git_reponame to info.txt file
             f = open('info.txt' , 'w')
-            git_username = raw_input('Enter your GitHub username : ')
+            git_username = input('Enter your GitHub username : ')
             f.write(git_username)
             f.write(os.linesep)
-            git_reponame = raw_input('Enter GitHub remote repository name : ')
+            git_reponame = input('Enter GitHub remote repository name : ')
             f.write(git_reponame)
             f.close()
 
         else :
     
             checkout_dir = sys.argv[1]
-            commit_msg = raw_input('Write your commit message: ')
+            commit_msg = input('Write your commit message: ')
 
 
             repo = Repo(checkout_dir)
             branch = repo.active_branch
-            print branch.name
+            print (branch.name)
+
             #Retrieve git_username and git_reponame from info.txt file
             
             file_name = 'info.txt'
@@ -66,7 +67,7 @@ def main():
             os.chdir('%s' %checkout_dir)
 	
             #Printing current wokring directory
-            print 'Current working directory is : '
+            print ('Current working directory is : ')
             os.system('pwd')        
         
             #Check whether git has been initialised in directory
@@ -90,7 +91,7 @@ GIT_WORK_TREE = %s git checkout -f""" %checkout_dir
             #Run git add, commit, push
             os.system('git add .')
             os.system('git commit -m \'' + commit_msg + '\'')
-            os.system('git push origin '+branch.name)
+            os.system('git push origin '+ branch.name)
 
 if __name__ == "__main__" :
     main()
