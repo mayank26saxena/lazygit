@@ -109,4 +109,3 @@ GIT_WORK_TREE = %s git checkout -f""" %checkout_dir
        
 if __name__ == "__main__" :
     main()
-

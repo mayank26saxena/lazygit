@@ -18,6 +18,6 @@ setup(
   install_requires=[
       'gitpython',
       'future',
-      'appdir',
+      'appdirs',
   ]
 )
