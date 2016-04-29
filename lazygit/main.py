@@ -1,36 +1,49 @@
 import os
 import sys
 from git import Repo
+from builtins import input
+from appdirs import *
 
 """
 You need to have a valid SSH key added to your GitHub account
 This key serves as a fingerprint and password authentication is skipped while pushing code
 If SSH key has not been added then you will be prompted for password while pushing
 
-To set up git_username and git_reponame run python lazy_git.py new
+To set up git_username and git_reponame run -
+python lazygit new
 
-For running LazyGit -
-3 system arguements are required
-Argument[0] - file name ie lazy_git.py
-Argument[1] - checkout_directory 
-
-To run locally, execute the following command:
-python lazy_git.py <checkout_directory> <local_repo_name>
-
+To push code to remote repository run - 
+lazygit <checkout_dir>
 """
 
 #Keywords
+usage_message = 'usage: lazygit [new|check-out-directory]'
+checkout_dir_error = 'checkout_dir does not exist'
 git_remote_command = 'git remote set-url origin git@github.com:'
 slash = "/"
 git = ".git"
 
+
+appname = "lazygit"
+appauthor = "MayankSaxena"
+
+info_dirname = user_data_dir(appname, appauthor)
+info_filename = info_dirname + '/info.txt' 
+
 def main():
-    if len(sys.argv) == 2 :
-        text = sys.argv[1]
-        text = text.lower()
-        if text == 'new' :
+    if not os.path.exists(info_dirname) :
+       os.makedirs(info_dirname)
+
+    try :
+      assert len(sys.argv) == 2 
+    except AssertionError as e:
+        print(usage_message)
+        return
+    commandname =  sys.argv[1]
+    commandname = commandname.lower()
+    if commandname == 'new' :
             #Write git_username and git_reponame to info.txt file
-            f = open('info.txt' , 'w')
+            f = open(info_filename , 'w')
             git_username = input('Enter your GitHub username : ')
             f.write(git_username)
             f.write(os.linesep)
@@ -38,20 +51,20 @@ def main():
             f.write(git_reponame)
             f.close()
 
-        else :
-    
+    else :
             checkout_dir = sys.argv[1]
+            if not os.path.exists(checkout_dir) :
+               print(checkout_dir_error)
+               return
+
             commit_msg = input('Write your commit message: ')
-
-
             repo = Repo(checkout_dir)
             branch = repo.active_branch
-            print (branch.name)
+            print ('Active branch name is: ',branch.name)
 
             #Retrieve git_username and git_reponame from info.txt file
-            
-            file_name = 'info.txt'
-            with open(file_name) as f:
+
+            with open(info_filename) as f:
                 content = f.readlines()
 
             content = [x.strip('\n') for x in content]
@@ -93,6 +106,7 @@ GIT_WORK_TREE = %s git checkout -f""" %checkout_dir
             os.system('git commit -m \'' + commit_msg + '\'')
             os.system('git push origin '+ branch.name)
 
+       
 if __name__ == "__main__" :
     main()
 
