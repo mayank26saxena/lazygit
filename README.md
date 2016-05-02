@@ -53,3 +53,5 @@ That awesome moment when I used lazy\_git.py to push lazy_git.py :sunglasses:
 - [X] Option to make commit on a branch. Default branch is master.  
 - [ ] Add git pull operation before push.
  
+# Contributing
+Use github's Pull request/issues feature for all contributions.
