@@ -45,7 +45,7 @@ I've developed this script to make the whole process easier, user friendly and l
 # Screenshots
 ![alt tag](https://github.com/mayank26saxena/LazyGit/blob/master/screenshots/screenshot2.png)
 
-That awesome moment when I used lazy\_git.py to push lazy_git.py :sunglasses:
+That awesome moment when I used lazygit to push lazygit.py :sunglasses:
 
 # Task Lists
 - [X] Submit package to PyPi.
