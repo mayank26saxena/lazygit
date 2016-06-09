@@ -14,11 +14,13 @@ For generating your own SSH key check out [Generating an SSH key](https://help.g
 <code> pip install lazygit </code>
 
 ### Using Git
-<code>git clone https://github.com/mayank26saxena/LazyGit.git</code>
+```
+git clone https://github.com/mayank26saxena/LazyGit.git
 
-<code>cd lazygit</code>
+cd lazygit
 
-<code>python setup.py install</code>
+python setup.py install
+```
 
 # How to Use
 1. Run <code>pip install lazygit</code> to install.
